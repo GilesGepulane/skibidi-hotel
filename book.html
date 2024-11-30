@@ -145,13 +145,13 @@ header h1 {
 /* Responsive Design */
 @media (max-width: 768px) {
   #booking-form {
-    width: 90%;
+    width: 75%;
   }
 }
 
 @media (max-width: 480px) {
   #booking-form {
-    width: 100%;
+    width: 75%;
   }
 }
 
@@ -211,19 +211,19 @@ header h1 {
 
       <form action="#" id="reservation-form" onsubmit="handleBookingSubmit(event)">
         <!-- Name Input -->
-        <label for="name">Full Name:</label>
+        <label for="name">Full Name: <span style="color: red;">*</span></label>
         <input type="text" id="name" name="name" required placeholder="Enter your full name">
 
         <!-- Email Input -->
-        <label for="email">Email:</label>
+        <label for="email">Email: <span style="color: red;">*</span></label>
         <input type="email" id="email" name="email" required placeholder="Enter your email address">
 
         <!-- Phone Number Input -->
-        <label for="phone">Phone Number:</label>
+        <label for="phone">Phone Number: <span style="color: red;">*</span></label>
         <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
 
         <!-- Room Type Selection -->
-        <label for="room">Select Room:</label>
+        <label for="room">Select Room: <span style="color: red;">*</span></label>
         <select id="room" name="room" required>
           <option value="standard">Standard Room - $100 per night</option>
           <option value="deluxe">Deluxe Room - $150 per night</option>
@@ -232,10 +232,10 @@ header h1 {
         </select>
 
         <!-- Check-in and Check-out Dates -->
-        <label for="checkin">Check-in Date:</label>
+        <label for="checkin">Check-in Date: <span style="color: red;">*</span></label>
         <input type="date" id="checkin" name="checkin" required>
 
-        <label for="checkout">Check-out Date:</label>
+        <label for="checkout">Check-out Date: <span style="color: red;">*</span></label>
         <input type="date" id="checkout" name="checkout" required>
 
         <!-- Special Requests -->

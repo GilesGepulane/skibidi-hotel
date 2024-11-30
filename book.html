@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Your Stay - Skibidi Hotel</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+/* Navigation Bar */
+nav {
+  background: #333;
+  color: white;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  overflow-x: auto; 
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  padding: 0;
+  margin: 0;
+  white-space: nowrap; /* Prevent wrapping of list items */
+}
+
+nav ul li {
+  padding: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 1rem;
+}
+
+nav ul li a:hover {
+  color: #007BFF;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #007BFF;
+}
+
+footer a:hover {
+  color: white;
+}
+    /* Hero Section */
+header {
+  background-color: black;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+/* Booking Form */
+#booking-form {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#booking-form h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+#booking-form p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+#booking-form label {
+  display: block;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+#booking-form input, 
+#booking-form select, 
+#booking-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+#booking-form textarea {
+  height: 120px;
+  resize: vertical;
+}
+
+.book-now {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.book-now:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  #booking-form {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  #booking-form {
+    width: 100%;
+  }
+}
+
+  </style>
+    <script>
+        function handleBookingSubmit(event) {
+          event.preventDefault(); // Prevent the form from submitting
+    
+          // Get values from the form
+          const name = document.getElementById('name').value;
+          const email = document.getElementById('email').value;
+          const phone = document.getElementById('phone').value;
+          const room = document.getElementById('room').value;
+          const checkin = document.getElementById('checkin').value;
+          const checkout = document.getElementById('checkout').value;
+    
+          // Check if any field is empty
+          if (!name || !email || !phone || !room || !checkin || !checkout) {
+            alert("Please fill in all the fields before submitting.");
+          } else {
+            // Show confirmation alert if all fields are filled
+            alert("Your booking request has been submitted! We'll get back to you soon.");
+            
+            // Redirect to home page after 2 seconds
+            setTimeout(function() {
+              window.location.href = 'index.html'; // Redirect to homepage
+            }, 2000); // Delay for 2 seconds
+          }
+        }
+      </script>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="rooms.html">Rooms & Suites</a></li>
+      <li><a href="facilities.html">Facilities</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <div class="hero">
+      <h1>Book Your Stay</h1>
+    </div>
+  </header>
+
+  <!-- Booking Form Section -->
+  <main class="container">
+    <section id="booking-form">
+      <h2>Reserve Your Room</h2>
+      <p>Fill in the form below to book your stay at Skibidi Hotel. We look forward to welcoming you!</p>
+
+      <form action="#" id="reservation-form" onsubmit="handleBookingSubmit(event)">
+        <!-- Name Input -->
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required placeholder="Enter your full name">
+
+        <!-- Email Input -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required placeholder="Enter your email address">
+
+        <!-- Phone Number Input -->
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required placeholder="Enter your phone number">
+
+        <!-- Room Type Selection -->
+        <label for="room">Select Room:</label>
+        <select id="room" name="room" required>
+          <option value="standard">Standard Room - $100 per night</option>
+          <option value="deluxe">Deluxe Room - $150 per night</option>
+          <option value="suite">Luxury Suite - $250 per night</option>
+          <option value="penthouse">Penthouse - $500 per night</option>
+        </select>
+
+        <!-- Check-in and Check-out Dates -->
+        <label for="checkin">Check-in Date:</label>
+        <input type="date" id="checkin" name="checkin" required>
+
+        <label for="checkout">Check-out Date:</label>
+        <input type="date" id="checkout" name="checkout" required>
+
+        <!-- Special Requests -->
+        <label for="requests">Special Requests:</label>
+        <textarea id="requests" name="requests" placeholder="Any special requests or preferences?"></textarea>
+
+        <!-- Submit Button -->
+        <button type="submit" id="submit" class="book-now">Confirm Booking</button>
+      </form>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Skibdi Hotel. All rights reserved.</p>
+    <p><a href="contact.html">Contact Us</a> | <a href="privacy.html">Privacy Policy</a></p>
+  </footer>
+</body>
+</html>

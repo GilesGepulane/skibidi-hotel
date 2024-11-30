@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Facilities - Paradise Hotel</title>
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: #007BFF;
+}
+
+/* Navigation Bar */
+nav {
+  background: #333;
+  color: white;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+  overflow-x: auto; 
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  padding: 0;
+  margin: 0;
+  white-space: nowrap; /* Prevent wrapping of list items */
+}
+
+nav ul li {
+  padding: 0 15px;
+}
+
+nav ul li a {
+  color: white;
+  font-size: 1rem;
+}
+
+nav ul li a:hover {
+  color: #007BFF;
+}
+
+/* Footer */
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #007BFF;
+}
+
+footer a:hover {
+  color: white;
+}
+    /* Hero Section */
+header {
+  background-color: black;
+  height: 40vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+}
+
+header h1 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+/* Facilities Section */
+#facilities {
+  text-align: center;
+  margin: 40px 0;
+}
+
+#facilities h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+#facilities p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 30px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.facility {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.facility h3 {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.facility img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.facility img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s;
+}
+
+/* Ensure responsive design */
+@media (max-width: 768px) {
+  .facility {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .facility img {
+    width: 90%;
+  }
+}
+
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="rooms.html">Rooms & Suites</a></li>
+      <li><a href="facilities.html" class="active">Facilities</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header>
+    <div class="hero">
+      <h1>Our Facilities</h1>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <section id="facilities">
+      <h2>Explore the Exceptional Facilities at Paradise Hotel</h2>
+      <p>At Paradise Hotel, we offer world-class facilities that cater to your every need. Whether you are here for business or leisure, our amenities provide the perfect environment for relaxation and productivity.</p>
+
+      <div class="facility">
+        <h3>Swimming Pool</h3>
+        <p>Our outdoor pool offers a serene escape with beautiful views of the surrounding landscape. It's the perfect place to relax, swim, and unwind after a busy day.</p>
+        <img src="deluxe.jpg" alt="Swimming Pool">
+      </div>
+
+      <div class="facility">
+        <h3>Fitness Center</h3>
+        <p>Our fully-equipped fitness center is available for guests who wish to maintain their fitness routine during their stay. It includes a range of modern equipment to suit all workout needs.</p>
+        <img src="deluxe.jpg" alt="Fitness Center">
+      </div>
+
+      <div class="facility">
+        <h3>Spa & Wellness</h3>
+        <p>Indulge in luxury with our spa and wellness services, offering massages, facials, and various therapies to rejuvenate your body and mind.</p>
+        <img src="deluxe.jpg" alt="Spa and Wellness">
+      </div>
+
+      <div class="facility">
+        <h3>Conference Rooms</h3>
+        <p>Our state-of-the-art conference rooms are ideal for corporate events, meetings, and seminars. They are equipped with the latest technology to ensure smooth and successful events.</p>
+        <img src="deluxe.jpg" alt="Conference Rooms">
+      </div>
+
+      <div class="facility">
+        <h3>Restaurant & Dining</h3>
+        <p>Our on-site restaurant serves a variety of international and local cuisine, prepared by world-class chefs. Enjoy a gourmet dining experience in a sophisticated atmosphere.</p>
+        <img src="deluxe.jpg" alt="Restaurant & Dining">
+      </div>
+
+      <div class="facility">
+        <h3>Event Hall</h3>
+        <p>Our event hall is a perfect venue for weddings, parties, and other celebrations. It can accommodate large groups and is equipped with modern sound and lighting systems.</p>
+        <img src="deluxe.jpg" alt="Event Hall">
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Skibidi Hotel. All rights reserved.</p>
+    <p><a href="contact.html">Contact Us</a> | <a href="privacy.html">Privacy Policy</a></p>
+  </footer>
+
+</body>
+</html>
